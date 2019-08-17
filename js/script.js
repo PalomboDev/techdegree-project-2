@@ -48,6 +48,10 @@ function appendPageLinks(list) {
     paginationDiv.className = "pagination";
     paginationDiv.appendChild(paginationUL);
 
+    if (list.length < 11) {
+        return;
+    }
+
     for (let i = 0; i < numberOfPaginationLinks; i++) {
         const paginationLI = document.createElement('li');
         const listItemAElement = document.createElement("a");
