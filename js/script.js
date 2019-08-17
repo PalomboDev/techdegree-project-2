@@ -106,13 +106,13 @@ function createSearchBar() {
 
 // Gets text from search bar, show matches, paginates the page
 function displayFromSearch() {
-    const searchBarCurrentValue = searchBarInput.value;
+    const searchBarCurrentValue = searchBarInput.value.toLowerCase();
     const resultList = [];
 
     for (let i = 0; i < studentListItems.length; i++) {
         const listItem = studentListItems[i];
 
-        if (listItem.textContent.includes(searchBarCurrentValue)) {
+        if (listItem.textContent.toLocaleLowerCase().includes(searchBarCurrentValue)) {
             listItem.style.display = "";
             resultList.push(listItem);
         } else {
