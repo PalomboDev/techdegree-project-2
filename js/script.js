@@ -32,7 +32,7 @@ function showPage(list, page) {
     }
 }
 
-// Creates links from current list
+// Gets list and checks if it is higher than 10. If it is pagination links are created.
 function appendPageLinks(list) {
     const paginationDivCheck = document.getElementsByClassName("pagination")[0];
 
@@ -88,12 +88,12 @@ function appendPageLinks(list) {
     }
 }
 
-// Creates search bar elements
+// Get the page header and creates a new elements that becomes a child of the header (search bar)
 function createSearchBar() {
     const pageHeaderDiv = document.querySelector("div.page-header");
     const studentSearchDiv = document.createElement("div");
-    searchBarInput = document.createElement("input"); // Global Scope Needed
-    searchBarButton = document.createElement("button"); // Global Scope Needed
+    searchBarInput = document.createElement("input");
+    searchBarButton = document.createElement("button");
 
     studentSearchDiv.className = "student-search";
     searchBarInput.placeholder = "Search for Students...";
